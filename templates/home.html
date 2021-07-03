@@ -1,0 +1,57 @@
+{%extends "base.html"%}
+
+{%block header%}
+<title> ESFMlab </title>
+{%endblock%}
+
+{%block content%}
+    <div >
+        <div style = padding:20px; ">
+            <h1 class = "display-4"> ¿Qué es ESFMlab?</h1>
+            <p class = "lead"></p>
+            <hr class="my-2">
+            <p>
+                Es una aplicación web desarrollada por estudiantes sin fines de lucro.
+                Tiene como objetivo presentar principales métodos numéricos mediante el cómputo de ejercicios ingresados por los usuarios. 
+            </p>
+            <p>
+                Paricularmente los estudiantes que cursan materias de métodos numéricos podrán utilizar esta herramienta para comprobar y
+                verificar sus aproximaciones con los mismos métodos, al igual que si no tienen el mismo resultado tendrán los pasos realizados
+                por el cómputo y así buscar su error.
+
+            </p>
+
+            <p>
+                Actualmente el proyecto sigue en desarrollo, si estás interesado en contribuir puedes ponerte en contacto con joules.hdz@gmail.com
+            </p>
+        </div>
+    </div>    
+    <div style = "background-color: rgb(246, 246, 246); ">
+        <div style = padding:20px; ">
+            <h1 class = "display-4"> Guía Rápida</h1>
+            <p class = "lead"></p>
+            <hr class="my-2">
+            <p class = "lead"> <b>Integración</b></p>
+            <ul>
+                <li>
+                    <p>
+                        Para el cómputo de integrales se necesitan tener las literales a integrar como <b>x</b> (integrales simples)  o <b>x</b> y <b>y</b> (integrales dobles).
+                    </p>
+                </li>
+                <li>
+                    <p>   
+                        Para la integración doble es importante considerar que si los 4 límites de integración son numéricos entonces primero se 
+                        integra con respecto a <b>x</b> y después con respecto a  <b>y</b> (esto es temporal).
+                    </p>
+                </li>
+                <li>
+                    <p>   
+                        Para la integración doble si alguna integral tiene límites como funciones, se tienen que ingresar en a y b, estos límites deben estar en función
+                        de la literal  <b>x</b>. Primero se
+                        integra con respecto a <b>y</b> y después con respecto a  <b>x</b> (esto es temporal).
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+{%endblock%}

@@ -1,0 +1,96 @@
+<nav class="navbar navbar-expand-lg navbar-light fixed-top " style="background-color: white;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{%url "home"%}">
+        <img src="https://i.ibb.co/pKHh0bB/ESFMlab.png" alt="" width="150" class="d-inline-block align-text-top">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            
+              <a class="nav-link" href="#">Documentación</a>
+            
+          </li>
+
+          <li class="nav-item dropdown">
+            {%if  "raices" in request.path%}
+              <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            {%else%} 
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            {%endif%}
+              Raíces
+            </a>
+            <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="{%url "construccion"%}">Bisección</a></li>
+              <li><a class="dropdown-item" href="{%url "construccion"%}">Newthon-Raphson</a></li>
+              <li><a class="dropdown-item" href="{%url "construccion"%}">Secante</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="{%url "construccion"%}">Documentación</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            {%if  "lineales" in request.path%}
+              <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            {%else%} 
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            {%endif%}
+              SS Lineales
+            </a>
+            <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="{%url "construccion"%}">Gauss</a></li>
+              <li><a class="dropdown-item" href="{%url "construccion"%}">Gausss-Jordan</a></li>
+              <li><a class="dropdown-item" href="{%url "construccion"%}">Jacobi</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="{%url "construccion"%}">Documentación</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            {%if  "lineales" in request.path%}
+              <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            {%else%} 
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            {%endif%}
+              Interpolación
+            </a>
+            <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="{%url "construccion"%}">Lagrange</a></li>
+              <li><a class="dropdown-item" href="{%url "construccion"%}">Polinomio de Newton</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="{%url "construccion"%}">Documentación</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            {%if  "integracion" in request.path%}
+              <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            {%else%} 
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            {%endif%}
+              Integración
+            </a>
+            <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="{%url "indefinida"%}">Integración Indefinida</a></li>
+              
+              <li><a class="dropdown-item" href="{%url "simple"%}">Integración Simple</a></li>
+              <li><a class="dropdown-item" href="{%url "doble"%}">Integración Doble</a></li>
+              <li><a class="dropdown-item" href="{%url "extrapolacion"%}">Por Extrapolación</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Documentación</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            {%if  request.path == "/creditos/"%}
+              <a class="nav-link active" href="{%url "creditos"%}">Créditos</a>
+            {%else%}
+              <a class="nav-link" href="{%url "creditos"%}">Créditos</a>
+            {%endif%}
+          </li>
+        </ul>
+        
+      </div>
+    </div>
+    
+  </nav>

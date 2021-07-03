@@ -1,0 +1,31 @@
+{%extends "base.html"%}
+
+{%block header%}
+    <title> ESFMlab |  Créditos</title>
+{%endblock%}
+
+{%block content%}
+    <div class="mb-3">
+        <h1> Créditos</h1>
+        <p>Esta aplicación web es sin fines de lucro y con propósitos académicos, puedes encontrar el repositorio con el código de la página
+            dando clic <a href="#">aquí</a>. Los contribuyentes son estudiantes de la Escuela Superior de Física y Matemáticas del IPN listados
+            a continuación.
+        </p>
+        {%for credito in creditos%}
+            <div style = "padding-top:20px;">
+                <div class="card" >
+                    <div class="card-header">
+                    {{credito.carrera}}
+                    </div>
+                    <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                        <footer class="card-footer">{{credito.nombre}}</footer>
+                        <p style = "font-size: medium;">{{credito.semestre}}to semestre</p>
+                    
+                    </blockquote>
+                    </div>
+                </div>
+            </div>
+        {%endfor%}
+    </div>
+{%endblock%}
